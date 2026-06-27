@@ -1,0 +1,490 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="Malets Danila - Media Buyer, Team Lead, Performance Marketing and Analytics."
+    />
+    <title>Malets Danila | Performance Marketing & Analytics</title>
+    <link rel="icon" type="image/svg+xml" href="./favicon.svg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600;700&family=Inter:wght@400;500;600;700;800&family=Russo+One&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <div class="grain" aria-hidden="true"></div>
+    <svg class="tool-icon-sprite" aria-hidden="true" focusable="false">
+      <symbol id="tool-ai-code" viewBox="0 0 48 48">
+        <path d="M12 16 24 9l12 7v16l-12 7-12-7V16Z" />
+        <path d="M12 16h12l12 16M36 16H24L12 32M24 9v30" />
+      </symbol>
+      <symbol id="tool-ai-assistant" viewBox="0 0 48 48">
+        <path d="M24 6.8c3.5 0 6.7 1.7 8.6 4.5 3.5-.2 6.8 1.6 8.5 4.7 1.8 3.1 1.7 6.8-.1 9.6 1.9 2.9 2.1 6.8.3 9.8-1.7 3-5 4.8-8.4 4.7-1.9 2.8-5.1 4.5-8.7 4.5-3.5 0-6.7-1.7-8.6-4.5-3.5.2-6.8-1.6-8.5-4.7-1.8-3.1-1.7-6.8.1-9.6-1.9-2.9-2.1-6.8-.3-9.8 1.7-3 5-4.8 8.4-4.7 1.9-2.8 5.1-4.5 8.7-4.5Z" />
+        <path d="M15.4 11.4v10.3l17.1 9.9M32.6 11.4 23.7 16.5v19.8M41 25.5l-8.9 5.2-17.1-9.9M32.9 40.6V30.3L15.8 20.4M15.2 40.6l8.9-5.2V15.6M7 25.5l8.9-5.2 17.1 9.9" />
+        <path d="M24 16.2 31 20.3v8.2L24 32.6l-7-4.1v-8.2l7-4.1Z" />
+      </symbol>
+      <symbol id="tool-office" viewBox="0 0 48 48">
+        <path d="M18 8 36 15v22l-18 4V8Z" />
+        <path d="M18 8 8 15v20l10 6M18 23h18" />
+      </symbol>
+      <symbol id="tool-looker" viewBox="0 0 48 48">
+        <circle cx="25" cy="28" r="11" />
+        <circle cx="16" cy="18" r="6" />
+        <circle cx="34" cy="13" r="5" />
+        <path d="m20 22 7 6M21 17l8-3" />
+      </symbol>
+      <symbol id="tool-excel" viewBox="0 0 48 48">
+        <rect x="8" y="14" width="18" height="22" rx="3" />
+        <path d="M26 18h14v22H18M14 21l7 10M21 21l-7 10M31 24h6M31 31h6" />
+      </symbol>
+      <symbol id="tool-canva" viewBox="0 0 48 48">
+        <circle cx="24" cy="24" r="17" />
+        <path d="M31 18c-2-3-9-3-13 1-5 5-3 13 4 13 4 0 7-2 9-5" />
+      </symbol>
+      <symbol id="tool-figma" viewBox="0 0 48 48">
+        <path d="M18 8h8a8 8 0 0 1 0 16h-8a8 8 0 0 1 0-16ZM18 24h8v8a8 8 0 1 1-8-8ZM26 24h4a8 8 0 1 0 0-16h-4v16Z" />
+      </symbol>
+      <symbol id="tool-appsflyer" viewBox="0 0 48 48">
+        <path class="tool-fill" d="M25 3.8 37.3 24 25 44.2 12.8 24 25 3.8Z" />
+        <path d="M25 3.8 37.3 24 25 44.2 12.8 24 25 3.8Z" />
+        <path class="tool-fill" d="M5.2 18.7h15.2l7 11.8H12.1L5.2 18.7Z" />
+        <path d="M5.2 18.7h15.2l7 11.8H12.1L5.2 18.7Z" />
+        <path class="tool-fill" d="M29.4 29.5h9.8l4.7 8.1h-9.8l-4.7-8.1Z" />
+        <path d="M29.4 29.5h9.8l4.7 8.1h-9.8l-4.7-8.1Z" />
+        <path d="m16 24 8.9-14.2M25 38.8 34.1 24" />
+      </symbol>
+      <symbol id="tool-binom" viewBox="0 0 48 48">
+        <path d="M10 34V23M18 34V17M26 34V20M34 34V11M8 38h32" />
+        <path d="M10 23c4-6 8-6 12-3s8 3 12-9" />
+      </symbol>
+      <symbol id="tool-python" viewBox="0 0 48 48">
+        <path class="tool-fill" d="M24 5.8h9.2c4.5 0 8 3.5 8 8V24c0 4.5-3.5 8-8 8H20.6a6.8 6.8 0 0 0-6.8 6.8v3.4H6.8V27.4c0-4.5 3.5-8 8-8h18v-4.2H24V5.8Z" />
+        <path d="M24 5.8h9.2c4.5 0 8 3.5 8 8V24c0 4.5-3.5 8-8 8H20.6a6.8 6.8 0 0 0-6.8 6.8v3.4H6.8V27.4c0-4.5 3.5-8 8-8h18v-4.2H24V5.8Z" />
+        <path class="tool-fill" d="M24 42.2h-9.2c-4.5 0-8-3.5-8-8V24c0-4.5 3.5-8 8-8h12.6a6.8 6.8 0 0 0 6.8-6.8V5.8h7v14.8c0 4.5-3.5 8-8 8h-18v4.2H24v9.4Z" />
+        <path d="M24 42.2h-9.2c-4.5 0-8-3.5-8-8V24c0-4.5 3.5-8 8-8h12.6a6.8 6.8 0 0 0 6.8-6.8V5.8h7v14.8c0 4.5-3.5 8-8 8h-18v4.2H24v9.4Z" />
+        <circle class="tool-dot" cx="17.2" cy="12.6" r="1.7" />
+        <circle class="tool-dot" cx="30.8" cy="35.4" r="1.7" />
+      </symbol>
+    </svg>
+    <header class="site-header">
+      <div class="view-switch is-home" aria-label="Site pages">
+        <a class="view-switch-button active" href="./index.html" data-i18n="nav.home">Home</a>
+        <a class="view-switch-button" href="./portfolio.html" data-i18n="nav.portfolio">Portfolio</a>
+      </div>
+      <nav class="top-nav" aria-label="Primary navigation">
+        <a href="#experience" data-i18n="nav.experience">Experience</a>
+        <a href="#skills" data-i18n="nav.skills">Skills</a>
+        <a href="#about" data-i18n="nav.about">About</a>
+        <a href="#contact" data-i18n="nav.contact">Contact</a>
+      </nav>
+      <div class="language-switch" aria-label="Language selector">
+        <button class="language-button active" type="button" data-lang="en">EN</button>
+        <button class="language-button" type="button" data-lang="ru">RU</button>
+      </div>
+    </header>
+
+    <main id="top">
+      <section class="hero section-reveal">
+        <div class="hero-copy">
+          <p class="eyebrow" data-i18n="hero.eyebrow">Digital CV</p>
+          <h1 data-i18n="hero.name">Malets Danila</h1>
+          <p class="hero-role" data-i18n="hero.role">
+            Media Buyer | Team Lead | Performance Marketing & Analytics
+          </p>
+          <p class="hero-summary" data-i18n="hero.summary">
+            I build acquisition systems: from campaign launch and tracking setup to dashboards,
+            team processes and creative production. Now moving toward product management and data
+            analytics with a strong performance-marketing background.
+          </p>
+          <div class="hero-actions">
+            <a class="primary-action" href="#contact" data-i18n="hero.email">Contact me</a>
+            <a class="secondary-action" href="#experience" data-i18n="hero.work">View experience</a>
+          </div>
+        </div>
+
+        <div class="hero-visual" aria-label="Photos of Malets Danila">
+          <div class="portrait-frame carousel" data-carousel>
+            <img class="carousel-slide active" src="./assets/danila-malets.jpg" alt="Malets Danila in Tokyo at night" />
+            <img class="carousel-slide" src="./assets/danila-studio.jpg" alt="Malets Danila portrait in studio" />
+            <img class="carousel-slide" src="./assets/danila-guitar.jpg" alt="Malets Danila playing guitar" />
+          </div>
+          <div class="carousel-controls" aria-label="Photo controls">
+            <button class="carousel-button" type="button" data-carousel-prev aria-label="Previous photo">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 18 9 12l6-6" /></svg>
+            </button>
+            <button class="carousel-button" type="button" data-carousel-next aria-label="Next photo">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m9 18 6-6-6-6" /></svg>
+            </button>
+          </div>
+          <div class="carousel-dots" aria-label="Photo carousel progress">
+            <span class="active"></span>
+            <span></span>
+            <span></span>
+          </div>
+        </div>
+      </section>
+
+      <section class="metrics-strip section-reveal" aria-label="Career highlights">
+        <article>
+          <span>4+</span>
+          <p data-i18n="metrics.years">years in performance marketing</p>
+        </article>
+        <article>
+          <span>8x</span>
+          <p data-i18n="metrics.revenue">company revenue uplift through analytics</p>
+        </article>
+        <article>
+          <span>4-6</span>
+          <p data-i18n="metrics.team">buyers led in acquisition teams</p>
+        </article>
+        <article>
+          <span>40-60%</span>
+          <p data-i18n="metrics.roi">ROI across managed campaign portfolios</p>
+        </article>
+      </section>
+
+      <section class="content-section section-reveal" id="experience">
+        <div class="section-heading">
+          <p class="section-kicker" data-i18n="experience.kicker">Professional experience</p>
+          <h2 data-i18n="experience.title">Hands-on buying, team leadership and acquisition infrastructure.</h2>
+        </div>
+        <div class="experience-list">
+          <article class="experience-card">
+            <div class="experience-topline">
+              <div>
+                <p class="company-name" data-i18n="experience.lead.company">NDA | iGaming</p>
+                <h3 data-i18n="experience.lead.role">Team Lead Media Buyer</h3>
+              </div>
+              <span class="job-type" data-i18n="experience.lead.mode">Barcelona, remote</span>
+            </div>
+            <p class="job-period" data-i18n="experience.lead.period">October 2025 - May 2026 (8 months)</p>
+            <p class="experience-summary" data-i18n="experience.lead.summary">
+              Built the in-app acquisition vertical from scratch: tracking, offer portfolio,
+              creative pipeline, buyer team and operating rhythm.
+            </p>
+            <ul>
+              <li data-i18n="experience.lead.item1">Set up Binom, AppsFlyer and Adjust tracking across Moloco, TikTok, Unity Ads and Mintegral.</li>
+              <li data-i18n="experience.lead.item2">Launched and scaled iGaming offers across Tier 1, Tier 2 and Tier 3 GEOs.</li>
+              <li data-i18n="experience.lead.item3">Hired, onboarded and led 4 media buyers, keeping portfolio ROI around 40-60%.</li>
+              <li data-i18n="experience.lead.item4">Built a playable-ad constructor that cut creative production time by more than half.</li>
+            </ul>
+          </article>
+
+          <article class="experience-card">
+            <div class="experience-topline">
+              <div>
+                <p class="company-name" data-i18n="experience.iris.company">Iris Media</p>
+                <h3 data-i18n="experience.iris.role">Media Buyer</h3>
+              </div>
+              <span class="job-type" data-i18n="experience.iris.mode">Dubai, office</span>
+            </div>
+            <p class="job-period" data-i18n="experience.iris.period">October 2022 - October 2025 (3 years 1 month)</p>
+            <p class="experience-summary" data-i18n="experience.iris.summary">
+              Managed end-to-end performance campaigns for international products in iGaming,
+              eCommerce, VPN and utilities.
+            </p>
+            <ul>
+              <li data-i18n="experience.iris.item1">Planned, launched and optimised campaigns across major traffic sources against ROAS and CPA goals.</li>
+              <li data-i18n="experience.iris.item2">Ran audience research, competitor analysis and creative testing to find scalable winning combinations.</li>
+              <li data-i18n="experience.iris.item3">Built dashboards and automated routine reporting, reducing manual data-pull time by 40%.</li>
+              <li data-i18n="experience.iris.item4">Managed Europe, APAC and LATAM GEOs with local market and policy adjustments.</li>
+            </ul>
+          </article>
+
+          <article class="experience-card">
+            <div class="experience-topline">
+              <div>
+                <p class="company-name" data-i18n="experience.indie.company">This Is Indie Music, Baby</p>
+                <h3 data-i18n="experience.indie.role">SMM Manager</h3>
+              </div>
+              <span class="job-type" data-i18n="experience.indie.mode">Moscow, remote</span>
+            </div>
+            <p class="job-period" data-i18n="experience.indie.period">June 2017 - September 2019 (2 years 4 months)</p>
+            <p class="experience-summary" data-i18n="experience.indie.summary">
+              Grew an indie-music digital community from scratch to 30,000 Telegram subscribers through content strategy,
+              audience work and targeted ads.
+            </p>
+            <ul>
+              <li data-i18n="experience.indie.item1">Created daily editorial content: playlists, artist selections, rubrics and community posts.</li>
+              <li data-i18n="experience.indie.item2">Published interviews with international artists including Aurora, Hollow Graves and Yung Blud.</li>
+              <li data-i18n="experience.indie.item3">Managed VK and Instagram paid campaigns to grow subscribers and engagement.</li>
+              <li data-i18n="experience.indie.item4">Built collaborations with artists, labels and brands, plus promoted handmade merch through VK Marketplace.</li>
+            </ul>
+          </article>
+        </div>
+      </section>
+
+      <section class="content-section portfolio-cta section-reveal" id="portfolio-preview">
+        <div>
+          <p class="section-kicker" data-i18n="portfolioCta.kicker">Portfolio</p>
+          <h2 data-i18n="portfolioCta.title">Playable creatives, tools and case work live on a separate page.</h2>
+          <p data-i18n="portfolioCta.body">
+            I moved interactive demos into a focused portfolio space so this page stays clean as a resume.
+          </p>
+        </div>
+        <a class="portfolio-cta-button" href="./portfolio.html" data-i18n="portfolioCta.button">Open portfolio</a>
+      </section>
+
+      <section class="content-section skills-section section-reveal" id="skills">
+        <div class="section-heading skills-heading">
+          <p class="section-kicker" data-i18n="skills.kicker">Core competencies</p>
+          <h2 data-i18n="skills.title">A performance marketer who can also build the system around growth.</h2>
+        </div>
+        <div class="skill-grid">
+          <article class="skill-card">
+            <div class="skill-icon media-icon" aria-hidden="true">
+              <svg viewBox="0 0 48 48"><path d="M8 34h32M12 28l7-10 7 6 10-14M34 10h6v6" /></svg>
+            </div>
+            <h3 data-i18n="skills.media.title">Media Buying & Optimisation</h3>
+            <p data-i18n="skills.media.body">Moloco, Liftoff/Vungle, Google Ads, TikTok, Unity Ads, Mintegral and programmatic platforms.</p>
+          </article>
+          <article class="skill-card">
+            <div class="skill-icon tracking-icon" aria-hidden="true">
+              <svg viewBox="0 0 48 48"><circle cx="24" cy="24" r="15" /><circle cx="24" cy="24" r="6" /><path d="M24 4v8M24 36v8M4 24h8M36 24h8" /></svg>
+            </div>
+            <h3 data-i18n="skills.tracking.title">Tracking & Attribution</h3>
+            <p data-i18n="skills.tracking.body">Binom, AppsFlyer, Adjust, postbacks and conversion flow setup.</p>
+          </article>
+          <article class="skill-card">
+            <div class="skill-icon analytics-icon" aria-hidden="true">
+              <svg viewBox="0 0 48 48"><path d="M10 38V18M22 38V10M34 38V24M6 38h36" /></svg>
+            </div>
+            <h3 data-i18n="skills.analytics.title">Data Analytics & Reporting</h3>
+            <p data-i18n="skills.analytics.body">ROI, LTV, CPA, cohorts, Looker Studio dashboards and custom reporting scripts.</p>
+          </article>
+          <article class="skill-card">
+            <div class="skill-icon automation-icon" aria-hidden="true">
+              <svg viewBox="0 0 48 48"><path d="M17 12h14l6 10-13 16L11 22l6-10Z" /><path d="M17 12l7 26 7-26M11 22h26" /></svg>
+            </div>
+            <h3 data-i18n="skills.automation.title">Automation & Scripting</h3>
+            <p data-i18n="skills.automation.body">Python, Google Apps Script, API integrations, AI tools, vibe coding and internal tools for reporting and creatives.</p>
+          </article>
+          <article class="skill-card">
+            <div class="skill-icon creative-icon" aria-hidden="true">
+              <svg viewBox="0 0 48 48"><path d="M12 12h24v24H12z" /><path d="M19 18v12l11-6-11-6Z" /></svg>
+            </div>
+            <h3 data-i18n="skills.creative.title">Creative Strategy</h3>
+            <p data-i18n="skills.creative.body">Motion briefs, playable ads for slots and crash games, plus a proprietary playable constructor.</p>
+          </article>
+          <article class="skill-card">
+            <div class="skill-icon leadership-icon" aria-hidden="true">
+              <svg viewBox="0 0 48 48"><circle cx="24" cy="15" r="6" /><path d="M12 38c2-8 7-12 12-12s10 4 12 12" /><path d="M8 32c1-5 4-8 8-8M40 32c-1-5-4-8-8-8" /></svg>
+            </div>
+            <h3 data-i18n="skills.leadership.title">Team Leadership</h3>
+            <p data-i18n="skills.leadership.body">Hiring, onboarding, KPIs, workflows and performance review systems for buyer teams.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="content-section tool-radar-section section-reveal" id="tools">
+        <div class="section-heading">
+          <p class="section-kicker" data-i18n="tools.kicker">Digital toolkit</p>
+          <h2 data-i18n="tools.title">Tool fluency radar.</h2>
+          <p data-i18n="tools.body">
+            A quick view of the digital tools I use across marketing, analytics, creative production and automation.
+          </p>
+        </div>
+        <div class="tool-radar">
+          <div class="radar-chart" aria-label="Digital tool skill radar">
+            <svg viewBox="0 0 420 420" role="img" aria-labelledby="radarTitle">
+              <title id="radarTitle">Digital tool skills radar</title>
+              <g class="radar-grid">
+                <polygon points="210,170 233.5,177.6 248,197.6 248,222.4 233.5,242.4 210,250 186.5,242.4 172,222.4 172,197.6 186.5,177.6" />
+                <polygon points="210,130 257,145.3 286.1,185.3 286.1,234.7 257,274.7 210,290 163,274.7 133.9,234.7 133.9,185.3 163,145.3" />
+                <polygon points="210,90 280.5,112.9 324.1,172.9 324.1,247.1 280.5,307.1 210,330 139.5,307.1 95.9,247.1 95.9,172.9 139.5,112.9" />
+                <polygon points="210,50 304,80.6 362.2,160.6 362.2,259.4 304,339.4 210,370 116,339.4 57.8,259.4 57.8,160.6 116,80.6" />
+                <line x1="210" y1="210" x2="210" y2="50" />
+                <line x1="210" y1="210" x2="304" y2="80.6" />
+                <line x1="210" y1="210" x2="362.2" y2="160.6" />
+                <line x1="210" y1="210" x2="362.2" y2="259.4" />
+                <line x1="210" y1="210" x2="304" y2="339.4" />
+                <line x1="210" y1="210" x2="210" y2="370" />
+                <line x1="210" y1="210" x2="116" y2="339.4" />
+                <line x1="210" y1="210" x2="57.8" y2="259.4" />
+                <line x1="210" y1="210" x2="57.8" y2="160.6" />
+                <line x1="210" y1="210" x2="116" y2="80.6" />
+              </g>
+              <polygon class="radar-area" points="210,82 294.6,93.5 347,165.5 316.5,244.6 285.2,313.6 210,322 153.6,287.7 73,254.5 118.7,180.3 172.4,158.2" />
+              <g class="radar-icons">
+                <g class="radar-point" transform="translate(210 82)" tabindex="0" aria-label="AI coding tools, 8 out of 10" data-radar-name="AI coding tools" data-radar-score="8/10">
+                  <circle r="22" /><svg x="-15" y="-15" width="30" height="30"><use href="#tool-ai-code" /></svg>
+                  <g class="radar-tooltip" transform="translate(-67 -64)"><rect width="134" height="38" rx="7" /><text x="67" y="16">AI coding tools</text><text x="67" y="30">8/10</text></g>
+                </g>
+                <g class="radar-point" transform="translate(294.6 93.5)" tabindex="0" aria-label="AI assistants, 9 out of 10" data-radar-name="AI assistants" data-radar-score="9/10">
+                  <circle r="22" /><svg x="-15" y="-15" width="30" height="30"><use href="#tool-ai-assistant" /></svg>
+                  <g class="radar-tooltip" transform="translate(-62 -64)"><rect width="124" height="38" rx="7" /><text x="62" y="16">AI assistants</text><text x="62" y="30">9/10</text></g>
+                </g>
+                <g class="radar-point" transform="translate(347 165.5)" tabindex="0" aria-label="Microsoft Office, 9 out of 10" data-radar-name="Microsoft Office" data-radar-score="9/10">
+                  <circle r="22" /><svg x="-15" y="-15" width="30" height="30"><use href="#tool-office" /></svg>
+                  <g class="radar-tooltip" transform="translate(-72 -64)"><rect width="144" height="38" rx="7" /><text x="72" y="16">Microsoft Office</text><text x="72" y="30">9/10</text></g>
+                </g>
+                <g class="radar-point" transform="translate(316.5 244.6)" tabindex="0" aria-label="Looker Studio, 7 out of 10" data-radar-name="Looker Studio" data-radar-score="7/10">
+                  <circle r="22" /><svg x="-15" y="-15" width="30" height="30"><use href="#tool-looker" /></svg>
+                  <g class="radar-tooltip" transform="translate(-64 -64)"><rect width="128" height="38" rx="7" /><text x="64" y="16">Looker Studio</text><text x="64" y="30">7/10</text></g>
+                </g>
+                <g class="radar-point" transform="translate(285.2 313.6)" tabindex="0" aria-label="Excel, 8 out of 10" data-radar-name="Excel" data-radar-score="8/10">
+                  <circle r="22" /><svg x="-15" y="-15" width="30" height="30"><use href="#tool-excel" /></svg>
+                  <g class="radar-tooltip" transform="translate(-46 -64)"><rect width="92" height="38" rx="7" /><text x="46" y="16">Excel</text><text x="46" y="30">8/10</text></g>
+                </g>
+                <g class="radar-point" transform="translate(210 322)" tabindex="0" aria-label="Canva, 7 out of 10" data-radar-name="Canva" data-radar-score="7/10">
+                  <circle r="22" /><svg x="-15" y="-15" width="30" height="30"><use href="#tool-canva" /></svg>
+                  <g class="radar-tooltip" transform="translate(-46 -64)"><rect width="92" height="38" rx="7" /><text x="46" y="16">Canva</text><text x="46" y="30">7/10</text></g>
+                </g>
+                <g class="radar-point" transform="translate(153.6 287.7)" tabindex="0" aria-label="Figma, 6 out of 10" data-radar-name="Figma" data-radar-score="6/10">
+                  <circle r="22" /><svg x="-15" y="-15" width="30" height="30"><use href="#tool-figma" /></svg>
+                  <g class="radar-tooltip" transform="translate(-46 -64)"><rect width="92" height="38" rx="7" /><text x="46" y="16">Figma</text><text x="46" y="30">6/10</text></g>
+                </g>
+                <g class="radar-point" transform="translate(73 254.5)" tabindex="0" aria-label="AppsFlyer, 9 out of 10" data-radar-name="AppsFlyer" data-radar-score="9/10">
+                  <circle r="22" /><svg x="-15" y="-15" width="30" height="30"><use href="#tool-appsflyer" /></svg>
+                  <g class="radar-tooltip" transform="translate(-56 -64)"><rect width="112" height="38" rx="7" /><text x="56" y="16">AppsFlyer</text><text x="56" y="30">9/10</text></g>
+                </g>
+                <g class="radar-point" transform="translate(118.7 180.3)" tabindex="0" aria-label="Binom, 6 out of 10" data-radar-name="Binom" data-radar-score="6/10">
+                  <circle r="22" /><svg x="-15" y="-15" width="30" height="30"><use href="#tool-binom" /></svg>
+                  <g class="radar-tooltip" transform="translate(-46 -64)"><rect width="92" height="38" rx="7" /><text x="46" y="16">Binom</text><text x="46" y="30">6/10</text></g>
+                </g>
+                <g class="radar-point" transform="translate(172.4 158.2)" tabindex="0" aria-label="Python, 4 out of 10" data-radar-name="Python" data-radar-score="4/10">
+                  <circle r="22" /><svg x="-15" y="-15" width="30" height="30"><use href="#tool-python" /></svg>
+                  <g class="radar-tooltip" transform="translate(-48 -64)"><rect width="96" height="38" rx="7" /><text x="48" y="16">Python</text><text x="48" y="30">4/10</text></g>
+                </g>
+              </g>
+            </svg>
+            <div class="radar-hover-card" data-radar-hover hidden>
+              <strong data-radar-hover-name></strong>
+              <span data-radar-hover-score></span>
+            </div>
+          </div>
+          <div class="tool-list">
+            <article><span><svg><use href="#tool-ai-code" /></svg></span><strong>AI coding tools</strong><em>8/10</em></article>
+            <article><span><svg><use href="#tool-ai-assistant" /></svg></span><strong>AI assistants</strong><em>9/10</em></article>
+            <article><span><svg><use href="#tool-office" /></svg></span><strong>Microsoft Office</strong><em>9/10</em></article>
+            <article><span><svg><use href="#tool-looker" /></svg></span><strong>Looker Studio</strong><em>7/10</em></article>
+            <article><span><svg><use href="#tool-excel" /></svg></span><strong>Excel</strong><em>8/10</em></article>
+            <article><span><svg><use href="#tool-canva" /></svg></span><strong>Canva</strong><em>7/10</em></article>
+            <article><span><svg><use href="#tool-figma" /></svg></span><strong>Figma</strong><em>6/10</em></article>
+            <article><span><svg><use href="#tool-appsflyer" /></svg></span><strong>AppsFlyer</strong><em>9/10</em></article>
+            <article><span><svg><use href="#tool-binom" /></svg></span><strong>Binom</strong><em>6/10</em></article>
+            <article><span><svg><use href="#tool-python" /></svg></span><strong>Python</strong><em>4/10</em></article>
+          </div>
+        </div>
+      </section>
+
+      <section class="content-section highlight-section section-reveal" id="achievements">
+        <div class="section-heading">
+          <p class="section-kicker" data-i18n="achievements.kicker">Impact</p>
+          <h2 data-i18n="achievements.title">The part where numbers and process meet.</h2>
+        </div>
+        <div class="achievement-grid">
+          <article>
+            <span>01</span>
+            <p data-i18n="achievements.item1">Increased company average revenue by 8x through data-driven insights and process optimisation.</p>
+          </article>
+          <article>
+            <span>02</span>
+            <p data-i18n="achievements.item2">Built a high-performing in-app acquisition team from the ground up.</p>
+          </article>
+          <article>
+            <span>03</span>
+            <p data-i18n="achievements.item3">Delivered consistent 40-60% ROI across managed GEOs and campaigns.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="content-section about-section section-reveal" id="about">
+        <div class="section-heading">
+          <p class="section-kicker" data-i18n="about.kicker">Background</p>
+          <h2 data-i18n="about.title">Education, languages and the creative side.</h2>
+        </div>
+        <div class="about-grid">
+          <article class="about-card">
+            <span class="about-label" data-i18n="education.kicker">Education</span>
+            <h3 data-i18n="education.school">Institute of Business, Belarusian State University</h3>
+            <p data-i18n="education.location">Minsk, Belarus</p>
+            <p data-i18n="education.degree">Socio-Administrative Management | Economist-Manager</p>
+          </article>
+          <article class="about-card">
+            <span class="about-label" data-i18n="languages.kicker">Languages</span>
+            <ul class="clean-list">
+              <li data-i18n="languages.ru">Russian - Native</li>
+              <li data-i18n="languages.en">English - B2, Upper-Intermediate</li>
+              <li data-i18n="languages.jp">Japanese - N4, Beginner-Intermediate</li>
+            </ul>
+          </article>
+          <article class="about-card wide">
+            <span class="about-label" data-i18n="interests.kicker">Interests</span>
+            <h3><a href="https://band.link/dysania" target="_blank" rel="noreferrer">dysania!</a></h3>
+            <p data-i18n="interests.body">
+              Guitarist in a post-punk band: live shows, recording, arrangements, music production and creative expression.
+            </p>
+          </article>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer section-reveal" id="contact">
+      <div>
+        <p class="section-kicker" data-i18n="contact.kicker">Contact</p>
+        <h2 data-i18n="contact.title">Let's talk.</h2>
+      </div>
+      <div class="contact-zone">
+        <div class="contact-icons" aria-label="Contact links">
+          <button
+            class="contact-icon"
+            type="button"
+            data-contact-menu
+            data-contact-type="email"
+            data-contact-value="malets0803@gmail.com"
+            data-contact-url="mailto:malets0803@gmail.com"
+            aria-label="Email"
+          >
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 6h16v12H4z" /><path d="m4 7 8 6 8-6" /></svg>
+          </button>
+          <button
+            class="contact-icon"
+            type="button"
+            data-contact-menu
+            data-contact-type="phone"
+            data-contact-value="+375447981354"
+            data-contact-url="tel:+375447981354"
+            aria-label="Phone"
+          >
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 4h4l2 5-3 2c1 3 3 5 6 6l2-3 5 2v4c0 1-1 2-2 2C10 22 2 14 2 5c0-1 1-2 2-2Z" /></svg>
+          </button>
+          <a class="contact-icon" href="https://t.me/Denial43" target="_blank" rel="noreferrer" aria-label="Telegram">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M21 4 3 11l7 3 3 7 8-17Z" /><path d="m10 14 11-10" /></svg>
+          </a>
+          <a class="contact-icon" href="https://www.linkedin.com/in/denial43/" target="_blank" rel="noreferrer" aria-label="LinkedIn">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 9h4v11H5zM5 4h4v3H5zM12 9h4v2c1-2 5-3 5 2v7h-4v-6c0-2-2-2-2 0v6h-4z" /></svg>
+          </a>
+          <a class="contact-icon" href="https://www.instagram.com/denialmalets" target="_blank" rel="noreferrer" aria-label="Instagram">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="4" y="4" width="16" height="16" rx="5" /><circle cx="12" cy="12" r="4" /><path d="M17 7h.01" /></svg>
+          </a>
+        </div>
+      </div>
+    </footer>
+
+    <div class="contact-popover" data-contact-popover hidden>
+      <p data-contact-label></p>
+      <div>
+        <button type="button" data-copy-contact data-i18n="contact.copy">Copy</button>
+        <a href="#" data-open-contact data-i18n="contact.open">Contact</a>
+      </div>
+    </div>
+
+    <div class="portfolio-jump" aria-label="Main section navigation">
+      <button type="button" data-home-prev aria-label="Previous section">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m6 15 6-6 6 6" /></svg>
+      </button>
+      <button type="button" data-home-next aria-label="Next section">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m6 9 6 6 6-6" /></svg>
+      </button>
+    </div>
+
+    <script src="./script.js"></script>
+  </body>
+</html>

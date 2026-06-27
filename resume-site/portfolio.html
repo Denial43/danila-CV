@@ -1,0 +1,225 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="Portfolio of Malets Danila - playable creatives and performance marketing work."
+    />
+    <title>Portfolio | Malets Danila</title>
+    <link rel="icon" type="image/svg+xml" href="./favicon.svg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600;700&family=Inter:wght@400;500;600;700;800&family=Russo+One&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <div class="grain" aria-hidden="true"></div>
+    <header class="site-header">
+      <div class="view-switch is-portfolio" aria-label="Site pages">
+        <a class="view-switch-button" href="./index.html" data-i18n="nav.home">Home</a>
+        <a class="view-switch-button active" href="./portfolio.html" data-i18n="nav.portfolio">Portfolio</a>
+      </div>
+      <nav class="top-nav" aria-label="Primary navigation">
+        <a href="#playables" data-i18n="nav.playables">Playables</a>
+        <a href="#constructor" data-i18n="nav.constructor">Constructor</a>
+        <a href="#static-banners" data-i18n="nav.static">Static</a>
+      </nav>
+      <div class="language-switch" aria-label="Language selector">
+        <button class="language-button active" type="button" data-lang="en">EN</button>
+        <button class="language-button" type="button" data-lang="ru">RU</button>
+      </div>
+    </header>
+
+    <main id="top">
+      <section class="portfolio-hero section-reveal">
+        <p class="section-kicker" data-i18n="portfolio.hero.kicker">Portfolio</p>
+        <h1 data-i18n="portfolio.hero.title">Examples of my work</h1>
+        <p data-i18n="portfolio.hero.body">
+          A focused space for interactive ads, tools, experiments and case work.
+        </p>
+      </section>
+
+      <section class="content-section playable-section portfolio-block section-reveal" id="playables">
+        <div class="playable-showcase">
+          <div class="playable-panel">
+            <p class="section-kicker" data-i18n="playables.kicker">Playable creatives</p>
+            <h2 data-i18n="playables.title">Interactive ad concepts inside a live phone preview.</h2>
+            <p class="playable-intro" data-i18n="playables.body">
+              A small gallery of playable creatives I built for performance campaigns.
+            </p>
+            <p class="playable-count" data-playable-count>01 / 03</p>
+            <h3 data-playable-title>Jokers Jewels</h3>
+            <p data-playable-description data-i18n="playables.description.one">
+              Slot-style playable with fast onboarding, visual feedback and direct interaction.
+            </p>
+            <div class="playable-actions">
+              <button class="playable-arrow" type="button" data-playable-prev aria-label="Previous creative">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 18 9 12l6-6" /></svg>
+              </button>
+              <button class="restart-button" type="button" data-playable-restart data-i18n="playables.restart">Start again</button>
+              <button class="playable-arrow" type="button" data-playable-next aria-label="Next creative">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m9 18 6-6-6-6" /></svg>
+              </button>
+            </div>
+          </div>
+          <div class="phone-shell" data-playable-shell>
+            <div class="phone-speaker" aria-hidden="true"></div>
+            <iframe
+              class="playable-frame"
+              data-playable-frame
+              src="./playables/1.html"
+              title="Playable creative preview"
+              allow="autoplay; clipboard-write"
+            ></iframe>
+          </div>
+        </div>
+      </section>
+
+      <section class="content-section constructor-section portfolio-block section-reveal" id="constructor">
+        <div class="constructor-showcase">
+          <div class="portfolio-gallery" data-gallery="constructor" aria-label="Playable constructor screenshots">
+            <button class="gallery-arrow gallery-arrow-prev" type="button" data-gallery-prev aria-label="Previous screenshot">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 18 9 12l6-6" /></svg>
+            </button>
+            <button class="gallery-open" type="button" data-gallery-open aria-label="Open screenshot">
+              <img data-gallery-image src="./assets/constructor/spinforge-slots.png" alt="SpinForge slot constructor interface" />
+            </button>
+            <button class="gallery-arrow gallery-arrow-next" type="button" data-gallery-next aria-label="Next screenshot">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m9 18 6-6-6-6" /></svg>
+            </button>
+            <div class="gallery-meta">
+              <span data-gallery-count>01 / 05</span>
+              <strong data-gallery-title>Slot constructor</strong>
+            </div>
+          </div>
+          <div class="constructor-copy">
+            <p class="section-kicker" data-i18n="constructor.kicker">Playable constructor</p>
+            <h2 data-i18n="constructor.title">Functional constructor for playable creatives.</h2>
+            <p data-i18n="constructor.body">
+              A fully customizable AI-assisted tool for building playable ads: from slot mechanics to crash-game flows,
+              languages, UI states, banking screens, bonuses, color palettes and export-ready layouts.
+            </p>
+            <div class="constructor-tags" aria-label="Constructor capabilities">
+              <span data-i18n="constructor.tag1">Slots</span>
+              <span data-i18n="constructor.tag2">Crash games</span>
+              <span data-i18n="constructor.tag3">Full customization</span>
+              <span data-i18n="constructor.tag4">AI-assisted build</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="content-section static-banners-section portfolio-block section-reveal" id="static-banners">
+        <div class="static-banners-showcase">
+          <div class="static-banners-copy">
+            <p class="section-kicker" data-i18n="banners.kicker">Static banners</p>
+            <h2 data-i18n="banners.title">AI-assisted visual concepts for performance creatives.</h2>
+            <p data-i18n="banners.body">
+              A set of static ad concepts I created independently with AI tools: idea, visual direction,
+              composition and final creative assembly were mine, without an external brief.
+            </p>
+            <div class="constructor-tags" aria-label="Static banner capabilities">
+              <span data-i18n="banners.tag1">AI production</span>
+              <span data-i18n="banners.tag2">Creative concept</span>
+              <span data-i18n="banners.tag3">Performance angle</span>
+            </div>
+          </div>
+          <div class="portfolio-gallery" data-gallery="banners" aria-label="Static banner examples">
+            <button class="gallery-arrow gallery-arrow-prev" type="button" data-gallery-prev aria-label="Previous banner">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 18 9 12l6-6" /></svg>
+            </button>
+            <button class="gallery-open" type="button" data-gallery-open aria-label="Open banner">
+              <img data-gallery-image src="./assets/banners/pint-2.png" alt="Static AI banner concept" />
+            </button>
+            <button class="gallery-arrow gallery-arrow-next" type="button" data-gallery-next aria-label="Next banner">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m9 18 6-6-6-6" /></svg>
+            </button>
+            <div class="gallery-meta">
+              <span data-gallery-count>01 / 09</span>
+              <strong data-gallery-title>Vacation reward concept</strong>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer portfolio-contact section-reveal" id="contact">
+      <div>
+        <p class="section-kicker" data-i18n="contact.kicker">Contact</p>
+        <h2 data-i18n="contact.title">Let's talk.</h2>
+      </div>
+      <div class="contact-zone">
+        <div class="contact-icons" aria-label="Contact links">
+          <button
+            class="contact-icon"
+            type="button"
+            data-contact-menu
+            data-contact-type="email"
+            data-contact-value="malets0803@gmail.com"
+            data-contact-url="mailto:malets0803@gmail.com"
+            aria-label="Email"
+          >
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 6h16v12H4z" /><path d="m4 7 8 6 8-6" /></svg>
+          </button>
+          <button
+            class="contact-icon"
+            type="button"
+            data-contact-menu
+            data-contact-type="phone"
+            data-contact-value="+375447981354"
+            data-contact-url="tel:+375447981354"
+            aria-label="Phone"
+          >
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 4h4l2 5-3 2c1 3 3 5 6 6l2-3 5 2v4c0 1-1 2-2 2C10 22 2 14 2 5c0-1 1-2 2-2Z" /></svg>
+          </button>
+          <a class="contact-icon" href="https://t.me/Denial43" target="_blank" rel="noreferrer" aria-label="Telegram">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M21 4 3 11l7 3 3 7 8-17Z" /><path d="m10 14 11-10" /></svg>
+          </a>
+          <a class="contact-icon" href="https://www.linkedin.com/in/denial43/" target="_blank" rel="noreferrer" aria-label="LinkedIn">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 9h4v11H5zM5 4h4v3H5zM12 9h4v2c1-2 5-3 5 2v7h-4v-6c0-2-2-2-2 0v6h-4z" /></svg>
+          </a>
+          <a class="contact-icon" href="https://www.instagram.com/denialmalets" target="_blank" rel="noreferrer" aria-label="Instagram">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="4" y="4" width="16" height="16" rx="5" /><circle cx="12" cy="12" r="4" /><path d="M17 7h.01" /></svg>
+          </a>
+        </div>
+      </div>
+    </footer>
+
+    <div class="portfolio-jump" aria-label="Portfolio section navigation">
+      <button type="button" data-portfolio-prev aria-label="Previous portfolio block">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m6 15 6-6 6 6" /></svg>
+      </button>
+      <button type="button" data-portfolio-next aria-label="Next portfolio block">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m6 9 6 6 6-6" /></svg>
+      </button>
+    </div>
+
+    <div class="gallery-lightbox" data-lightbox hidden>
+      <button class="lightbox-close" type="button" data-lightbox-close aria-label="Close image">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18" /></svg>
+      </button>
+      <button class="lightbox-arrow lightbox-arrow-prev" type="button" data-lightbox-prev aria-label="Previous image">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 18 9 12l6-6" /></svg>
+      </button>
+      <img data-lightbox-image src="" alt="" />
+      <button class="lightbox-arrow lightbox-arrow-next" type="button" data-lightbox-next aria-label="Next image">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m9 18 6-6-6-6" /></svg>
+      </button>
+    </div>
+
+    <div class="contact-popover" data-contact-popover hidden>
+      <p data-contact-label></p>
+      <div>
+        <button type="button" data-copy-contact data-i18n="contact.copy">Copy</button>
+        <a href="#" data-open-contact data-i18n="contact.open">Contact</a>
+      </div>
+    </div>
+
+    <script src="./script.js"></script>
+  </body>
+</html>
