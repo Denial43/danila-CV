@@ -74,6 +74,7 @@
               data-playable-frame
               src="./playables/1.html"
               title="Playable creative preview"
+              loading="lazy"
               allow="autoplay; clipboard-write"
             ></iframe>
           </div>
@@ -87,7 +88,7 @@
               <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 18 9 12l6-6" /></svg>
             </button>
             <button class="gallery-open" type="button" data-gallery-open aria-label="Open screenshot">
-              <img data-gallery-image src="./assets/constructor/spinforge-slots.png" alt="SpinForge slot constructor interface" />
+              <img data-gallery-image src="./assets/constructor/spinforge-slots.jpg" alt="SpinForge slot constructor interface" loading="lazy" decoding="async" />
             </button>
             <button class="gallery-arrow gallery-arrow-next" type="button" data-gallery-next aria-label="Next screenshot">
               <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m9 18 6-6-6-6" /></svg>
@@ -134,7 +135,7 @@
               <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 18 9 12l6-6" /></svg>
             </button>
             <button class="gallery-open" type="button" data-gallery-open aria-label="Open banner">
-              <img data-gallery-image src="./assets/banners/pint-2.png" alt="Static AI banner concept" />
+              <img data-gallery-image src="./assets/banners/pint-2.jpg" alt="Static AI banner concept" loading="lazy" decoding="async" />
             </button>
             <button class="gallery-arrow gallery-arrow-next" type="button" data-gallery-next aria-label="Next banner">
               <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m9 18 6-6-6-6" /></svg>
@@ -190,14 +191,9 @@
       </div>
     </footer>
 
-    <div class="portfolio-jump" aria-label="Portfolio section navigation">
-      <button type="button" data-portfolio-prev aria-label="Previous portfolio block">
-        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m6 15 6-6 6 6" /></svg>
-      </button>
-      <button type="button" data-portfolio-next aria-label="Next portfolio block">
-        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m6 9 6 6 6-6" /></svg>
-      </button>
-    </div>
+    <button class="scroll-top-button" type="button" data-scroll-top aria-label="Back to top" hidden>
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m6 15 6-6 6 6" /></svg>
+    </button>
 
     <div class="gallery-lightbox" data-lightbox hidden>
       <button class="lightbox-close" type="button" data-lightbox-close aria-label="Close image">

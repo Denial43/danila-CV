@@ -111,8 +111,8 @@
         <div class="hero-visual" aria-label="Photos of Malets Danila">
           <div class="portrait-frame carousel" data-carousel>
             <img class="carousel-slide active" src="./assets/danila-malets.jpg" alt="Malets Danila in Tokyo at night" />
-            <img class="carousel-slide" src="./assets/danila-studio.jpg" alt="Malets Danila portrait in studio" />
-            <img class="carousel-slide" src="./assets/danila-guitar.jpg" alt="Malets Danila playing guitar" />
+            <img class="carousel-slide" src="./assets/danila-studio.jpg" alt="Malets Danila portrait in studio" loading="lazy" decoding="async" />
+            <img class="carousel-slide" src="./assets/danila-guitar.jpg" alt="Malets Danila playing guitar" loading="lazy" decoding="async" />
           </div>
           <div class="carousel-controls" aria-label="Photo controls">
             <button class="carousel-button" type="button" data-carousel-prev aria-label="Previous photo">
@@ -476,14 +476,9 @@
       </div>
     </div>
 
-    <div class="portfolio-jump" aria-label="Main section navigation">
-      <button type="button" data-home-prev aria-label="Previous section">
-        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m6 15 6-6 6 6" /></svg>
-      </button>
-      <button type="button" data-home-next aria-label="Next section">
-        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m6 9 6 6 6-6" /></svg>
-      </button>
-    </div>
+    <button class="scroll-top-button" type="button" data-scroll-top aria-label="Back to top" hidden>
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m6 15 6-6 6 6" /></svg>
+    </button>
 
     <script src="./script.js"></script>
   </body>

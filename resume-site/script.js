@@ -305,13 +305,7 @@ const lightboxImage = document.querySelector("[data-lightbox-image]");
 const lightboxCloseButton = document.querySelector("[data-lightbox-close]");
 const lightboxPreviousButton = document.querySelector("[data-lightbox-prev]");
 const lightboxNextButton = document.querySelector("[data-lightbox-next]");
-const homeBlocks = document.querySelectorAll(".hero, #experience, #skills, #tools, #achievements, #about, .site-footer");
-const homePreviousButton = document.querySelector("[data-home-prev]");
-const homeNextButton = document.querySelector("[data-home-next]");
-const portfolioBlocks = document.querySelectorAll(".portfolio-block, .portfolio-contact");
-const portfolioPreviousButton = document.querySelector("[data-portfolio-prev]");
-const portfolioNextButton = document.querySelector("[data-portfolio-next]");
-const portfolioNavLinks = document.querySelectorAll(".top-nav a[href^='#']");
+const scrollTopButton = document.querySelector("[data-scroll-top]");
 const radarPoints = document.querySelectorAll(".radar-point");
 const radarChart = document.querySelector(".radar-chart");
 const radarHoverCard = document.querySelector("[data-radar-hover]");
@@ -352,41 +346,41 @@ const playables = [
 const portfolioGalleries = {
   constructor: [
     {
-      src: "./assets/constructor/spinforge-slots.png",
+      src: "./assets/constructor/spinforge-slots.jpg",
       titleKey: "gallery.constructor.slots",
       alt: "SpinForge slot constructor interface"
     },
     {
-      src: "./assets/constructor/spinforge-banking.png",
+      src: "./assets/constructor/spinforge-banking.jpg",
       titleKey: "gallery.constructor.banking",
       alt: "SpinForge banking flow customization"
     },
     {
-      src: "./assets/constructor/spinforge-penalty.png",
+      src: "./assets/constructor/spinforge-penalty.jpg",
       titleKey: "gallery.constructor.penalty",
       alt: "SpinForge crash game constructor interface"
     },
     {
-      src: "./assets/constructor/spinforge-chicken-road.png",
+      src: "./assets/constructor/spinforge-chicken-road.jpg",
       titleKey: "gallery.constructor.chicken",
       alt: "SpinForge Chicken Road gameplay setup"
     },
     {
-      src: "./assets/constructor/spinforge-tablet.png",
+      src: "./assets/constructor/spinforge-tablet.jpg",
       titleKey: "gallery.constructor.tablet",
       alt: "SpinForge tablet preview mode"
     }
   ],
   banners: [
-    { src: "./assets/banners/pint-2.png", titleKey: "gallery.banners.vacation", alt: "Static AI banner concept with vacation reward angle" },
-    { src: "./assets/banners/pint-5.png", titleKey: "gallery.banners.celebrity", alt: "Static AI banner concept with celebrity-style comparison" },
-    { src: "./assets/banners/pint-1.png", titleKey: "gallery.banners.reflection", alt: "Static AI banner concept with phone reflection in sunglasses" },
-    { src: "./assets/banners/pint-4.png", titleKey: "gallery.banners.premium", alt: "Static AI banner concept with premium casino atmosphere" },
-    { src: "./assets/banners/pint-6.png", titleKey: "gallery.banners.pocket", alt: "Static AI banner concept with mobile casino in pocket" },
-    { src: "./assets/banners/vs-2.png", titleKey: "gallery.banners.comparison", alt: "Static AI banner concept comparing casino offers" },
-    { src: "./assets/banners/whatsup-2.png", titleKey: "gallery.banners.messenger", alt: "Static AI banner concept in messenger chat format" },
-    { src: "./assets/banners/insta.png", titleKey: "gallery.banners.social", alt: "Static AI banner concept in Instagram post format" },
-    { src: "./assets/banners/wc26.png", titleKey: "gallery.banners.football", alt: "Static AI banner concept with football news angle" }
+    { src: "./assets/banners/pint-2.jpg", titleKey: "gallery.banners.vacation", alt: "Static AI banner concept with vacation reward angle" },
+    { src: "./assets/banners/pint-5.jpg", titleKey: "gallery.banners.celebrity", alt: "Static AI banner concept with celebrity-style comparison" },
+    { src: "./assets/banners/pint-1.jpg", titleKey: "gallery.banners.reflection", alt: "Static AI banner concept with phone reflection in sunglasses" },
+    { src: "./assets/banners/pint-4.jpg", titleKey: "gallery.banners.premium", alt: "Static AI banner concept with premium casino atmosphere" },
+    { src: "./assets/banners/pint-6.jpg", titleKey: "gallery.banners.pocket", alt: "Static AI banner concept with mobile casino in pocket" },
+    { src: "./assets/banners/vs-2.jpg", titleKey: "gallery.banners.comparison", alt: "Static AI banner concept comparing casino offers" },
+    { src: "./assets/banners/whatsup-2.jpg", titleKey: "gallery.banners.messenger", alt: "Static AI banner concept in messenger chat format" },
+    { src: "./assets/banners/insta.jpg", titleKey: "gallery.banners.social", alt: "Static AI banner concept in Instagram post format" },
+    { src: "./assets/banners/wc26.jpg", titleKey: "gallery.banners.football", alt: "Static AI banner concept with football news angle" }
   ]
 };
 
@@ -604,46 +598,6 @@ function moveLightbox(direction) {
   renderLightbox();
 }
 
-function scrollBlockToViewportCenter(block) {
-  const rect = block.getBoundingClientRect();
-  const headerBottom = document.querySelector(".site-header")?.getBoundingClientRect().bottom ?? 0;
-  const availableHeight = window.innerHeight - headerBottom;
-  const viewportCenter = headerBottom + availableHeight / 2;
-  const targetTop = window.scrollY + rect.top + rect.height / 2 - viewportCenter;
-
-  window.scrollTo({
-    top: Math.max(0, targetTop),
-    behavior: "smooth"
-  });
-}
-
-function jumpBlocks(blocks, direction) {
-  if (!blocks.length) {
-    return;
-  }
-
-  const viewportAnchor = window.scrollY + window.innerHeight * 0.45;
-  const positions = Array.from(blocks).map((block) => block.offsetTop);
-  let currentIndex = positions.findIndex((position, index) => {
-    const nextPosition = positions[index + 1] ?? Number.POSITIVE_INFINITY;
-    return viewportAnchor >= position && viewportAnchor < nextPosition;
-  });
-
-  if (currentIndex < 0) {
-    const targetIndex = direction > 0 ? 0 : blocks.length - 1;
-    scrollBlockToViewportCenter(blocks[targetIndex]);
-    return;
-  }
-
-  const nextIndex = Math.min(Math.max(currentIndex + direction, 0), blocks.length - 1);
-  scrollBlockToViewportCenter(blocks[nextIndex]);
-}
-
-function jumpPortfolio(direction) {
-  jumpBlocks(portfolioBlocks, direction);
-}
-
-
 async function copyText(value) {
   if (navigator.clipboard?.writeText) {
     await navigator.clipboard.writeText(value);
@@ -700,6 +654,14 @@ function openPopover(button) {
   popover.hidden = false;
 }
 
+function updateScrollTopButton() {
+  if (!scrollTopButton) {
+    return;
+  }
+
+  scrollTopButton.hidden = window.scrollY < 420;
+}
+
 languageButtons.forEach((button) => {
   button.addEventListener("click", () => setLanguage(button.dataset.lang));
 });
@@ -747,24 +709,7 @@ galleryNodes.forEach((node) => {
 lightboxCloseButton?.addEventListener("click", closeLightbox);
 lightboxPreviousButton?.addEventListener("click", () => moveLightbox(-1));
 lightboxNextButton?.addEventListener("click", () => moveLightbox(1));
-homePreviousButton?.addEventListener("click", () => jumpBlocks(homeBlocks, -1));
-homeNextButton?.addEventListener("click", () => jumpBlocks(homeBlocks, 1));
-portfolioPreviousButton?.addEventListener("click", () => jumpPortfolio(-1));
-portfolioNextButton?.addEventListener("click", () => jumpPortfolio(1));
-
-portfolioNavLinks.forEach((link) => {
-  link.addEventListener("click", (event) => {
-    const target = document.querySelector(link.getAttribute("href"));
-
-    if (!target?.classList.contains("portfolio-block")) {
-      return;
-    }
-
-    event.preventDefault();
-    scrollBlockToViewportCenter(target);
-    history.replaceState(null, "", link.getAttribute("href"));
-  });
-});
+scrollTopButton?.addEventListener("click", () => window.scrollTo({ top: 0, behavior: "smooth" }));
 
 function showRadarTooltip(point) {
   if (!radarChart || !radarHoverCard || !radarHoverName || !radarHoverScore) {
@@ -857,6 +802,8 @@ document.addEventListener("click", (event) => {
 
 window.addEventListener("resize", closePopover);
 window.addEventListener("scroll", closePopover, { passive: true });
+window.addEventListener("scroll", updateScrollTopButton, { passive: true });
+updateScrollTopButton();
 
 const observer = new IntersectionObserver(
   (entries) => {

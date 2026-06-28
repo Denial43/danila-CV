@@ -1523,17 +1523,11 @@ h3 {
   padding-bottom: 24vh;
 }
 
-.portfolio-jump {
+.scroll-top-button {
   position: fixed;
   right: 22px;
   bottom: 22px;
   z-index: 30;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 8px;
-}
-
-.portfolio-jump button {
   display: grid;
   width: 46px;
   height: 46px;
@@ -1544,14 +1538,28 @@ h3 {
   color: var(--text);
   cursor: pointer;
   backdrop-filter: blur(12px);
+  opacity: 1;
+  transform: translateY(0);
+  transition:
+    opacity 220ms ease,
+    transform 220ms ease,
+    border-color 180ms ease,
+    color 180ms ease;
 }
 
-.portfolio-jump button:hover {
+.scroll-top-button[hidden] {
+  display: grid;
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(14px);
+}
+
+.scroll-top-button:hover {
   border-color: rgba(255, 106, 61, 0.62);
   color: var(--red);
 }
 
-.portfolio-jump svg {
+.scroll-top-button svg {
   width: 24px;
   height: 24px;
   fill: none;
@@ -1989,9 +1997,29 @@ h3 {
     font-size: clamp(2.35rem, 11vw, 3.5rem);
   }
 
+  .portfolio-hero {
+    background:
+      radial-gradient(circle at 82% 22%, rgba(142, 197, 194, 0.16), transparent 14rem),
+      linear-gradient(160deg, rgba(38, 33, 29, 0.98), rgba(24, 23, 22, 0.98));
+    color: var(--text);
+  }
+
+  .portfolio-hero p:not(.section-kicker) {
+    color: var(--muted);
+  }
+
   .hero {
     padding-top: 34px;
     padding-bottom: 34px;
+    background:
+      radial-gradient(circle at 64% 28%, rgba(142, 197, 194, 0.16), transparent 14rem),
+      linear-gradient(160deg, rgba(38, 33, 29, 0.98), rgba(24, 23, 22, 0.98));
+    color: var(--text);
+  }
+
+  .hero-summary,
+  .hero-role {
+    color: var(--muted);
   }
 
   .eyebrow,
@@ -2040,7 +2068,7 @@ h3 {
   }
 
   .phone-shell {
-    width: min(330px, 100%);
+    width: min(300px, 82vw);
     border-radius: 34px;
     padding: 13px;
   }
@@ -2100,14 +2128,9 @@ h3 {
     right: max(8px, env(safe-area-inset-right));
   }
 
-  .portfolio-jump {
+  .scroll-top-button {
     right: max(10px, env(safe-area-inset-right));
     bottom: max(10px, env(safe-area-inset-bottom));
-    max-width: calc(100vw - 20px);
-    gap: 6px;
-  }
-
-  .portfolio-jump button {
     width: 42px;
     height: 42px;
   }
