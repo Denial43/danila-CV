@@ -810,7 +810,12 @@ updateScrollTopButton();
 const observer = new IntersectionObserver(
   (entries) => {
     entries.forEach((entry) => {
-      entry.target.classList.toggle("visible", entry.isIntersecting);
+      if (!entry.isIntersecting) {
+        return;
+      }
+
+      entry.target.classList.add("visible");
+      observer.unobserve(entry.target);
     });
   },
   { threshold: 0.18 }

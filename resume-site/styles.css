@@ -27,7 +27,7 @@ html {
   overflow-x: hidden;
   overflow-y: auto;
   color-scheme: dark;
-  scroll-behavior: smooth;
+  scroll-behavior: auto;
   -webkit-text-size-adjust: 100%;
 }
 
@@ -1217,15 +1217,14 @@ h3 {
 }
 
 .constructor-section {
-  padding-top: 18vh;
+  padding-top: 118px;
 }
 
 .portfolio-block {
   position: relative;
-  min-height: calc(100vh - 90px);
-  display: grid;
-  align-items: center;
-  scroll-margin-top: 90px;
+  min-height: 0;
+  display: block;
+  scroll-margin-top: 110px;
 }
 
 .portfolio-block::before {
@@ -1451,8 +1450,8 @@ h3 {
 }
 
 .static-banners-section {
-  padding-top: 18vh;
-  padding-bottom: 34vh;
+  padding-top: 118px;
+  padding-bottom: 160px;
 }
 
 .static-banners-showcase {
@@ -1527,7 +1526,7 @@ h3 {
 
 .portfolio-contact {
   padding-top: 0;
-  padding-bottom: 24vh;
+  padding-bottom: 150px;
 }
 
 .scroll-top-button {
@@ -2107,6 +2106,10 @@ h3 {
     width: min(300px, 82vw);
     border-radius: 34px;
     padding: 13px;
+  }
+
+  .playable-frame {
+    pointer-events: none;
   }
 
   .phone-shell::before {
