@@ -386,6 +386,8 @@ const portfolioGalleries = {
 
 const galleryState = {};
 
+document.body.classList.remove("lightbox-open");
+
 function readSavedLanguage() {
   try {
     return localStorage.getItem("resumeLanguage");

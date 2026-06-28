@@ -25,7 +25,10 @@ html {
   width: 100%;
   max-width: 100%;
   overflow-x: hidden;
+  overflow-y: auto;
+  color-scheme: dark;
   scroll-behavior: smooth;
+  -webkit-text-size-adjust: 100%;
 }
 
 body {
@@ -34,13 +37,17 @@ body {
   margin: 0;
   min-height: 100vh;
   overflow-x: hidden;
+  overflow-y: auto;
   background:
     radial-gradient(circle at 52% 8%, rgba(142, 197, 194, 0.12), transparent 20rem),
     radial-gradient(circle at 10% 18%, rgba(255, 106, 61, 0.18), transparent 24rem),
     linear-gradient(135deg, #29231f 0%, #1f1b18 48%, #181716 100%);
+  background-color: #181716;
   color: var(--text);
   font-family: var(--font-body);
   line-height: 1.6;
+  touch-action: pan-y;
+  -webkit-overflow-scrolling: touch;
 }
 
 body.lightbox-open {
@@ -1938,6 +1945,35 @@ h3 {
     gap: 32px;
     min-height: auto;
     padding-top: 34px;
+    background:
+      radial-gradient(circle at 64% 28%, rgba(142, 197, 194, 0.16), transparent 14rem),
+      linear-gradient(160deg, rgba(38, 33, 29, 0.98), rgba(24, 23, 22, 0.98));
+    color: var(--text);
+  }
+
+  .hero-summary,
+  .hero-role {
+    color: var(--muted);
+  }
+
+  .secondary-action {
+    border-color: var(--line);
+    color: var(--text);
+  }
+
+  .portfolio-hero,
+  .portfolio-cta,
+  .portfolio-next {
+    background:
+      radial-gradient(circle at 82% 22%, rgba(142, 197, 194, 0.16), transparent 14rem),
+      linear-gradient(160deg, rgba(38, 33, 29, 0.98), rgba(24, 23, 22, 0.98));
+    color: var(--text);
+  }
+
+  .portfolio-hero p:not(.section-kicker),
+  .portfolio-cta p:not(.section-kicker),
+  .portfolio-next p:not(.section-kicker) {
+    color: var(--muted);
   }
 
   .hero-visual {
