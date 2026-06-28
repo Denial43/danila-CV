@@ -823,16 +823,24 @@ if ("IntersectionObserver" in window) {
   const revealObserver = new IntersectionObserver(
     (entries) => {
       entries.forEach((entry) => {
-        entry.target.classList.toggle("visible", entry.isIntersecting);
+        const isVisible = entry.isIntersecting && entry.intersectionRatio > 0.06;
+        entry.target.classList.toggle("visible", isVisible);
       });
     },
     {
-      threshold: 0.08,
-      rootMargin: "0px 0px -8% 0px"
+      threshold: [0, 0.06, 0.18],
+      rootMargin: "0px 0px -6% 0px"
     }
   );
 
-  revealNodes.forEach((node) => revealObserver.observe(node));
+  revealNodes.forEach((node) => {
+    if (node.matches(".hero, .portfolio-hero")) {
+      node.classList.add("visible");
+      return;
+    }
+
+    revealObserver.observe(node);
+  });
 } else {
   revealNodes.forEach((node) => node.classList.add("visible"));
 }

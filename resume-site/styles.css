@@ -23,25 +23,23 @@
 
 html {
   width: 100%;
-  height: auto;
+  min-height: 100%;
   max-width: 100%;
   overflow-x: hidden;
-  overflow-y: auto;
+  overflow-anchor: none;
   color-scheme: dark;
   scroll-behavior: auto;
-  overscroll-behavior-y: auto;
   -webkit-text-size-adjust: 100%;
 }
 
 body {
   width: 100%;
-  height: auto;
   max-width: 100%;
   margin: 0;
-  min-height: 100vh;
+  min-height: 100%;
   overflow-x: hidden;
-  overflow-y: auto;
-  overscroll-behavior-y: auto;
+  overflow-anchor: none;
+  touch-action: pan-y;
   background:
     radial-gradient(circle at 52% 8%, rgba(142, 197, 194, 0.12), transparent 20rem),
     radial-gradient(circle at 10% 18%, rgba(255, 106, 61, 0.18), transparent 24rem),
@@ -1129,6 +1127,23 @@ h3 {
   .playable-frame {
     pointer-events: none !important;
   }
+
+  .section-reveal > * {
+    transform: none;
+    transition: opacity 520ms cubic-bezier(0.16, 1, 0.3, 1);
+  }
+
+  .section-reveal.visible > * {
+    transform: none;
+  }
+
+  .section-reveal.visible .skill-card,
+  .section-reveal.visible .experience-card,
+  .section-reveal.visible .achievement-grid article,
+  .section-reveal.visible .about-card,
+  .section-reveal.visible .tool-list article {
+    animation-name: itemFadeReveal;
+  }
 }
 
 .playable-panel {
@@ -1769,16 +1784,21 @@ h3 {
 }
 
 .section-reveal {
-  opacity: 0;
-  transform: translate3d(0, 28px, 0) scale(0.985);
-  transition:
-    opacity 760ms cubic-bezier(0.16, 1, 0.3, 1),
-    transform 760ms cubic-bezier(0.16, 1, 0.3, 1);
+  overflow-anchor: none;
 }
 
-.section-reveal.visible {
+.section-reveal > * {
+  opacity: 0;
+  transform: translate3d(0, 16px, 0);
+  will-change: opacity, transform;
+  transition:
+    opacity 620ms cubic-bezier(0.16, 1, 0.3, 1),
+    transform 620ms cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.section-reveal.visible > * {
   opacity: 1;
-  transform: translate3d(0, 0, 0) scale(1);
+  transform: translate3d(0, 0, 0);
 }
 
 .section-reveal.visible .skill-card,
@@ -1846,11 +1866,20 @@ h3 {
 @keyframes itemReveal {
   from {
     opacity: 0;
-    transform: translate3d(0, 18px, 0) scale(0.98);
+    transform: translate3d(0, 10px, 0) scale(0.99);
   }
   to {
     opacity: 1;
     transform: translate3d(0, 0, 0) scale(1);
+  }
+}
+
+@keyframes itemFadeReveal {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
   }
 }
 
