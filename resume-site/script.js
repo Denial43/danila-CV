@@ -324,6 +324,7 @@ let carouselTimer = null;
 let activePlayable = 0;
 let activeLightboxGallery = null;
 let activeLightboxIndex = 0;
+let scrollTicking = false;
 
 const playables = [
   {
@@ -664,6 +665,18 @@ function updateScrollTopButton() {
   scrollTopButton.hidden = window.scrollY < 420;
 }
 
+function handlePageScroll() {
+  if (scrollTicking) {
+    return;
+  }
+
+  scrollTicking = true;
+  window.requestAnimationFrame(() => {
+    updateScrollTopButton();
+    scrollTicking = false;
+  });
+}
+
 languageButtons.forEach((button) => {
   button.addEventListener("click", () => setLanguage(button.dataset.lang));
 });
@@ -679,7 +692,7 @@ viewSwitchLinks.forEach((link) => {
 
     window.setTimeout(() => {
       window.location.href = link.href;
-    }, 280);
+    }, 260);
   });
 });
 
@@ -711,7 +724,7 @@ galleryNodes.forEach((node) => {
 lightboxCloseButton?.addEventListener("click", closeLightbox);
 lightboxPreviousButton?.addEventListener("click", () => moveLightbox(-1));
 lightboxNextButton?.addEventListener("click", () => moveLightbox(1));
-scrollTopButton?.addEventListener("click", () => window.scrollTo({ top: 0, behavior: "smooth" }));
+scrollTopButton?.addEventListener("click", () => window.scrollTo(0, 0));
 
 function showRadarTooltip(point) {
   if (!radarChart || !radarHoverCard || !radarHoverName || !radarHoverScore) {
@@ -803,34 +816,26 @@ document.addEventListener("click", (event) => {
 });
 
 window.addEventListener("resize", closePopover);
-window.addEventListener("scroll", closePopover, { passive: true });
-window.addEventListener("scroll", updateScrollTopButton, { passive: true });
+window.addEventListener("scroll", handlePageScroll, { passive: true });
 updateScrollTopButton();
 
-const observer = new IntersectionObserver(
-  (entries) => {
-    entries.forEach((entry) => {
-      if (!entry.isIntersecting) {
-        return;
-      }
+if ("IntersectionObserver" in window) {
+  const revealObserver = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        entry.target.classList.toggle("visible", entry.isIntersecting);
+      });
+    },
+    {
+      threshold: 0.08,
+      rootMargin: "0px 0px -8% 0px"
+    }
+  );
 
-      entry.target.classList.add("visible");
-      observer.unobserve(entry.target);
-    });
-  },
-  { threshold: 0.18 }
-);
-
-revealNodes.forEach((node) => {
-  const rect = node.getBoundingClientRect();
-
-  if (rect.top < window.innerHeight * 0.95) {
-    node.classList.add("visible");
-    return;
-  }
-
-  observer.observe(node);
-});
+  revealNodes.forEach((node) => revealObserver.observe(node));
+} else {
+  revealNodes.forEach((node) => node.classList.add("visible"));
+}
 
 const savedLanguage = readSavedLanguage();
 const browserLanguage = navigator.language.toLowerCase().startsWith("ru") ? "ru" : "en";
