@@ -1077,6 +1077,71 @@ h3 {
   transform: translateY(-2px);
 }
 
+.target-roles {
+  position: relative;
+  overflow: hidden;
+  margin-top: 18px;
+  border: 1px solid rgba(232, 221, 200, 0.22);
+  border-radius: 8px;
+  padding: clamp(22px, 4vw, 38px);
+  background:
+    linear-gradient(90deg, rgba(255, 106, 61, 0.16), transparent 38%),
+    rgba(232, 221, 200, 0.06);
+}
+
+.target-roles::before {
+  content: "";
+  position: absolute;
+  inset: 12px;
+  border: 1px solid rgba(232, 221, 200, 0.16);
+  pointer-events: none;
+}
+
+.target-roles h2 {
+  max-width: 760px;
+  margin-bottom: 14px;
+  font-size: clamp(1.75rem, 4vw, 3.2rem);
+}
+
+.target-role-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 10px;
+  margin-top: 22px;
+}
+
+.target-role-grid article {
+  position: relative;
+  min-height: 138px;
+  border: 1px solid rgba(232, 221, 200, 0.18);
+  border-radius: 8px;
+  padding: 16px;
+  background: rgba(232, 221, 200, 0.06);
+}
+
+.target-role-grid span {
+  display: block;
+  margin-bottom: 12px;
+  color: var(--red);
+  font-size: 0.78rem;
+  font-weight: 900;
+}
+
+.target-role-grid strong {
+  display: block;
+  margin-bottom: 8px;
+  color: var(--text);
+  font-size: 0.95rem;
+  line-height: 1.15;
+}
+
+.target-role-grid p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.78rem;
+  line-height: 1.35;
+}
+
 .portfolio-hero {
   margin-top: 18px;
   padding: clamp(28px, 6vw, 70px);
@@ -2388,6 +2453,35 @@ h3 {
 
   .content-section {
     padding-top: 78px;
+  }
+
+  .target-roles {
+    padding: 20px;
+  }
+
+  .target-role-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 8px;
+    margin-top: 18px;
+  }
+
+  .target-role-grid article {
+    min-height: 128px;
+    padding: 12px;
+  }
+
+  .target-role-grid span {
+    margin-bottom: 8px;
+    font-size: 0.68rem;
+  }
+
+  .target-role-grid strong {
+    font-size: 0.76rem;
+  }
+
+  .target-role-grid p {
+    font-size: 0.64rem;
+    line-height: 1.28;
   }
 
   .constructor-showcase {
