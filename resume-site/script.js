@@ -78,9 +78,11 @@ const translations = {
     "playables.title": "Interactive ad concepts inside a live phone preview.",
     "playables.body": "A small gallery of playable creatives I built for performance campaigns.",
     "playables.restart": "Start again",
-    "playables.description.one": "Slot-style playable with fast onboarding, visual feedback and direct interaction.",
-    "playables.description.two": "Crash/arcade-style flow focused on quick taps, risk and reward.",
-    "playables.description.three": "Tower Rush playable with vertical progression, quick decisions and reward-driven pacing.",
+    "playables.description.slotspicker": "Slotspicker playable where the user chooses which slot to try first, creating a stronger sense of control before the game flow starts.",
+    "playables.description.jokers": "Slot-style playable with fast onboarding, visual feedback and direct interaction.",
+    "playables.description.chicken": "Crash/arcade-style flow focused on quick taps, risk and reward.",
+    "playables.description.tower": "Tower Rush playable with vertical progression, quick decisions and reward-driven pacing.",
+    "playables.description.penalty": "Penalty playable built around the World Cup context: a simple sports mechanic, clear swipe interaction and instant reward feedback.",
     "portfolioCta.kicker": "Portfolio",
     "portfolioCta.title": "Playable creatives, tools and case work live on a separate page.",
     "portfolioCta.body": "I moved interactive demos into a focused portfolio space so this page stays clean as a resume.",
@@ -243,9 +245,11 @@ const translations = {
     "playables.title": "Интерактивные рекламные концепты в живом превью телефона.",
     "playables.body": "Небольшая галерея playable-креативов, которые я делал для performance-кампаний.",
     "playables.restart": "Начать заново",
-    "playables.description.one": "Slot-style playable с быстрым входом в механику, визуальным фидбеком и прямым взаимодействием.",
-    "playables.description.two": "Crash/arcade-flow с упором на быстрые тапы, риск и награду.",
-    "playables.description.three": "Tower Rush playable с вертикальным прогрессом, быстрыми решениями и темпом вокруг награды.",
+    "playables.description.slotspicker": "Slotspicker playable, где пользователь сам выбирает, в какой слот зайти первым, и за счёт этого быстрее вовлекается в игровой flow.",
+    "playables.description.jokers": "Slot-style playable с быстрым входом в механику, визуальным фидбеком и прямым взаимодействием.",
+    "playables.description.chicken": "Crash/arcade-flow с упором на быстрые тапы, риск и награду.",
+    "playables.description.tower": "Tower Rush playable с вертикальным прогрессом, быстрыми решениями и темпом вокруг награды.",
+    "playables.description.penalty": "Penalty playable, собранный под чемпионат мира: простая спортивная механика, понятный swipe и быстрый фидбек по награде.",
     "portfolioCta.kicker": "Портфолио",
     "portfolioCta.title": "Playable-креативы, инструменты и кейсы живут на отдельной странице.",
     "portfolioCta.body": "Я вынес интерактивные демо в отдельную витрину, чтобы главная страница оставалась чистым резюме.",
@@ -378,19 +382,29 @@ let scrollTicking = false;
 
 const playables = [
   {
+    title: "Slotspicker",
+    src: "./playables/4.html",
+    descriptionKey: "playables.description.slotspicker"
+  },
+  {
     title: "Jokers Jewels",
     src: "./playables/1.html",
-    descriptionKey: "playables.description.one"
+    descriptionKey: "playables.description.jokers"
   },
   {
     title: "Chicken Road",
     src: "./playables/2.html",
-    descriptionKey: "playables.description.two"
+    descriptionKey: "playables.description.chicken"
   },
   {
     title: "Tower Rush",
     src: "./playables/3.html",
-    descriptionKey: "playables.description.three"
+    descriptionKey: "playables.description.tower"
+  },
+  {
+    title: "Penalty",
+    src: "./playables/5.html",
+    descriptionKey: "playables.description.penalty"
   }
 ];
 
